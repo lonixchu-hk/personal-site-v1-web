@@ -6,13 +6,10 @@ export default function Home() {
   return (
     <main className="bg-[#1a191d]">
       <NavBar />
-      <div className="flex flex-col w-full h-screen relative bg-[url('/main-bg.jpg')] bg-cover bg-center">
+      <div className="flex flex-col w-full h-screen relative">
         <HeroSection isDev={true} />
         {/* TODO: Add scroll down */}
         <BackgroundOverlay />
-      </div>
-      <div>
-        <HeroSection isDev={true} />
       </div>
     </main>
   );

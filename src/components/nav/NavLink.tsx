@@ -7,14 +7,27 @@ interface Props {
   href: string;
 }
 
-export const NavLink = (props: Props) => {
+export const TopNavLink = (props: Props) => {
   return (
     <div>
-      <Link href={props.href} className="text-white relative">
+      <Link href={props.href} className="text-white relative text-base mx-3">
         {props.name}
         <div className="absolute right-0 top-[-16px] text-xs text-[#aaa]">
           {props.index}
         </div>
+      </Link>
+    </div>
+  );
+};
+
+export const SideNavLink = (props: Props) => {
+  return (
+    <div className="h-10">
+      <Link
+        href={props.href}
+        className="text-black relative text-base tracking-tighter"
+      >
+        {props.name}
       </Link>
     </div>
   );
