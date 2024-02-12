@@ -1,6 +1,7 @@
-import { HeroSection } from "@/components/HeroSection";
 import { NavBar } from "@/components/nav/NavBar";
+import { HeroSection } from "@/components/HeroSection";
 import { BackgroundOverlay } from "@/components/BackgroundOverlay";
+import { SkillsSection } from "@/components/SkillsSection";
 
 const underMaintenance = process.env.underMaintenance == "true";
 
@@ -13,8 +14,7 @@ export default function Home() {
         {/* TODO: Add scroll down animation*/}
         <BackgroundOverlay />
       </div>
-
-      <div className="h-96"></div>
+      <SkillsSection />
     </main>
   );
 }
