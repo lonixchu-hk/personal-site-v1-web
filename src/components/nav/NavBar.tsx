@@ -56,6 +56,9 @@ export const NavBar = () => {
         index={"0" + (index + 1)}
         name={link.name}
         href={link.href}
+        onClick={() => {
+          showSideNavBarHandler(false);
+        }}
       />
     );
   });

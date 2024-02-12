@@ -5,6 +5,7 @@ interface Props {
   index: string;
   name: string;
   href: string;
+  onClick?: () => void;
 }
 
 export const TopNavLink = (props: Props) => {
@@ -26,6 +27,7 @@ export const SideNavLink = (props: Props) => {
       <Link
         href={props.href}
         className="text-black relative text-base tracking-tighter"
+        onClick={props.onClick}
       >
         {`//`} {props.name}
       </Link>
