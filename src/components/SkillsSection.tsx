@@ -14,8 +14,9 @@ const skillIconSize = "50";
 
 const skills = [
   {
-    title: "Software Development",
-    color: "#ffffff",
+    title1: "Software",
+    title2: "Development",
+    color: "#df058d",
     icon: <IconDeviceDesktop stroke={1} size={skillIconSize} />,
     content: (
       <div>
@@ -27,8 +28,9 @@ const skills = [
     ),
   },
   {
-    title: "Frontend Development",
-    color: "#ffffff",
+    title1: "Frontend Dev",
+    title2: "React, Vue",
+    color: "#2c49d8",
     icon: <IconBrandVue stroke={1} size={skillIconSize} />,
     content: (
       <div>
@@ -38,8 +40,9 @@ const skills = [
     ),
   },
   {
-    title: "Cloud Computing",
-    color: "#ffffff",
+    title1: "Cloud",
+    title2: "Computing",
+    color: "#ff6b2b",
     icon: <IconCloudCode stroke={1} size={skillIconSize} />,
     content: (
       <div>

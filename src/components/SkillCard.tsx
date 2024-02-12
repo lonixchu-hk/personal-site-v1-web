@@ -4,7 +4,8 @@ import { Poppins } from "next/font/google";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 
 interface SkillObj {
-  title: string;
+  title1: string;
+  title2: string;
   color: string;
   icon: JSX.Element;
   content: JSX.Element;
@@ -15,12 +16,18 @@ interface Props {
 }
 
 export const SkillCard = (props: Props) => {
+  const backStrokeColor = `shadow-[${props.skill.color}]`;
   return (
-    <div className="lg:col-span-1 col-span-full border border-white flex flex-col px-4 pt-7 pb-10 text-white mb-4">
-      <div className="flex items-center">
+    <div className="lg:col-span-1 col-span-full border border-white flex flex-col px-4 pt-6 pb-10 text-white mb-4">
+      <div className="flex items-end mb-4">
         <span className="p-3">{props.skill.icon}</span>
-        <div className={`${poppins.className} text-2xl font-bold`}>
-          {props.skill.title}
+        <div className={`${poppins.className} text-2xl font-bold ml-1`}>
+          <div
+            className={`w-fit px-[1px] pr-1 leading-6 shadow-inner2 ${backStrokeColor}`}
+          >
+            {props.skill.title1}
+          </div>
+          <div className="">{props.skill.title2}</div>
         </div>
         <div className="cardTitleDeco"></div>
       </div>
