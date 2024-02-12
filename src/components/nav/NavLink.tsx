@@ -11,8 +11,7 @@ export const TopNavLink = (props: Props) => {
   return (
     <div>
       <Link href={props.href} className="text-white relative text-base mx-3">
-        {/* $<small>cd </small> */}
-        // {props.name}
+        {`//`} {props.name}
         <div className="absolute right-0 top-[-16px] text-xs text-[#aaa]">
           {props.index}
         </div>
@@ -28,7 +27,7 @@ export const SideNavLink = (props: Props) => {
         href={props.href}
         className="text-black relative text-base tracking-tighter"
       >
-        // {props.name}
+        {`//`} {props.name}
       </Link>
     </div>
   );
