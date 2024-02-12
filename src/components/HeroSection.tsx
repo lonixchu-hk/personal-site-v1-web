@@ -22,23 +22,22 @@ export const HeroSection = (props: Props) => {
         >
           {props.isDev ? `` : `LONIX CHU`}
         </h1>
-        <h5 className="text-white text-center mb-4 text-2xl tracking-wider">
-          {props.isDev ? (
-            <TypeAnimation
-              sequence={[
-                "UNDER DEVELOPMENT...",
-                5000,
-                "UNDER MAINTENANCE...",
-                5000,
-              ]}
-              wrapper="span"
-              speed={30}
-              style={{ fontSize: "2em", display: "inline-block" }}
-              repeat={Infinity}
-            />
-          ) : (
-            `SOFTWARE ENGINEER, FULL STACK DEVELOPER.`
-          )}
+        <h5 className="text-white text-center mb-4 text-2xl  leading-6 tracking-wider">
+          {props.isDev
+            ? `UNDER DEVELOPMENT...`
+            : // <TypeAnimation
+              //   sequence={[
+              //     "UNDER DEVELOPMENT...",
+              //     5000,
+              //     "UNDER MAINTENANCE...",
+              //     5000,
+              //   ]}
+              //   wrapper="span"
+              //   speed={30}
+              //   style={{ fontSize: "2em", display: "inline-block" }}
+              //   repeat={Infinity}
+              // />
+              `SOFTWARE ENGINEER, FULL STACK DEVELOPER.`}
         </h5>
       </div>
     </section>
