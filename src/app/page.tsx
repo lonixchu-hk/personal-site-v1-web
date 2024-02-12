@@ -2,14 +2,14 @@ import { HeroSection } from "@/components/HeroSection";
 import { NavBar } from "@/components/nav/NavBar";
 import { BackgroundOverlay } from "@/components/BackgroundOverlay";
 
-const isDev = false;
+const underMaintenance = process.env.underMaintenance == "true";
 
 export default function Home() {
   return (
     <main className="bg-[#1a191d]">
       <NavBar />
       <div className="flex flex-col w-full h-screen relative">
-        <HeroSection isDev={isDev} />
+        <HeroSection underMaintenance={underMaintenance} />
         {/* TODO: Add scroll down animation*/}
         <BackgroundOverlay />
       </div>

@@ -7,7 +7,7 @@ import { Poppins } from "next/font/google";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 
 interface Props {
-  isDev: boolean;
+  underMaintenance: boolean;
 }
 
 export const HeroSection = (props: Props) => {
@@ -20,10 +20,10 @@ export const HeroSection = (props: Props) => {
             " text-white text-center mb-4 text-8xl font-extrabold"
           }
         >
-          {props.isDev ? `` : `LONIX CHU`}
+          {props.underMaintenance ? `` : `LONIX CHU`}
         </h1>
         <h5 className="text-white text-center mb-4 text-2xl  leading-6 tracking-wider">
-          {props.isDev
+          {props.underMaintenance
             ? `UNDER DEVELOPMENT...`
             : // <TypeAnimation
               //   sequence={[
