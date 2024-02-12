@@ -7,8 +7,8 @@ import { IconMenu, IconX } from "@tabler/icons-react";
 import { TypeAnimation } from "react-type-animation";
 
 const navLinks = [
-  { name: "home", href: "/" },
-  { name: "skills", href: "/" },
+  { name: "home", href: "#home" },
+  { name: "skills", href: "#skills" },
   { name: "work", href: "/" },
   { name: "experience", href: "/" },
   { name: "contact", href: "/" },
@@ -31,18 +31,11 @@ export const NavBar = () => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
-    // just trigger this so that the initial state
-    // is updated as soon as the component is mounted
-    // related: https://stackoverflow.com/a/63408216
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const topNavLinksEles = Array.from(navLinks).map((link, index) => {
@@ -68,7 +61,17 @@ export const NavBar = () => {
   });
 
   return (
-    <nav className="absolute top-0 left-0 z-10 w-full">
+    <nav
+      className={`${
+        scrollY < 300
+          ? "absolute"
+          : "fixed bg-[#1a191df0] backdrop-blur-sm visible opacity-100"
+      } ${
+        scrollY > 100 && scrollY < 300
+          ? "invisible opacity-0 top-[-100px]"
+          : "visible opacity-100 top-0"
+      } transition-all duration-500 top-0 left-0 z-10 w-full h-20`}
+    >
       <div className="py-7 lg:mx-10 mx-5 relative">
         <div className="leftSide absolute grid gap-4 grid-cols-6 w-[200px]">
           {/* Nav Btn */}

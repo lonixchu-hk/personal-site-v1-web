@@ -56,7 +56,10 @@ export const SkillsSection = () => {
   });
 
   return (
-    <section className="lg:mt-10 py-20 px-5 lg:px-14 relative">
+    <section
+      id="skills"
+      className=" -scroll-mt-96 lg:mt-10 py-20 px-5 lg:px-14 relative"
+    >
       <SectionTitle classname="text-7xl">My Skills</SectionTitle>
       <div className="mt-10 grid grid-cols-3">{skillCards}</div>
     </section>
