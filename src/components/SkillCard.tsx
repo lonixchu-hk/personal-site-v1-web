@@ -7,7 +7,7 @@ interface SkillObj {
   title: string;
   color: string;
   icon: JSX.Element;
-  content: HTMLDivElement;
+  content: JSX.Element;
 }
 
 interface Props {
