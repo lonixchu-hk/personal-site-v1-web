@@ -5,8 +5,9 @@ import "./globals.css";
 const robotoMono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lonix Chu Zone",
-  description: "This is my personal website",
+  title: "Lonix Chu - Software Engineer & Full Stack Developer",
+  description:
+    "This is Lonix Chu personal website to display his skills and experiences.",
 };
 
 export default function RootLayout({
