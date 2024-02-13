@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "standalone",
   env: {
-    underMaintenance: "false",
+    underMaintenance: "true",
   },
 };
 
