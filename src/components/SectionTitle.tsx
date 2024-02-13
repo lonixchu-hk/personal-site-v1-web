@@ -11,7 +11,7 @@ interface Props {
 export const SectionTitle = (props: Props) => {
   return (
     <h1
-      className={`${poppins.className} text-white text-center mb-4 font-extrabold tracking-wide ${props.classname}`}
+      className={`${poppins.className} text-white mb-4 font-extrabold tracking-wide ${props.classname}`}
     >
       {props.children}
     </h1>

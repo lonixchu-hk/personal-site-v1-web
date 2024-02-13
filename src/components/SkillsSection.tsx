@@ -34,8 +34,8 @@ const skills = [
     icon: <IconBrandVue stroke={1} size={skillIconSize} />,
     content: (
       <div>
-        Over 6 years of development experience in HTML, CSS, JS, Vue, React and
-        NextJS frameworks.
+        Over 6 years of development experience in HTML, CSS, JS, QJuery, Vue,
+        React and NextJS frameworks.
       </div>
     ),
   },
@@ -61,9 +61,11 @@ export const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className=" -scroll-mt-96 lg:mt-10 py-20 px-5 lg:px-14 relative"
+      className="-scroll-mt-12 lg:-scroll-mt-96 lg:mt-10 py-20 px-5 lg:px-14 relative w-full flex flex-col items-center"
     >
-      <SectionTitle classname="text-7xl">My Skills</SectionTitle>
+      <SectionTitle classname="text-5xl md:text-7xl text-center">
+        My Skills
+      </SectionTitle>
       <div className="mt-10 grid grid-cols-3">{skillCards}</div>
     </section>
   );

@@ -18,7 +18,7 @@ interface Props {
 export const SkillCard = (props: Props) => {
   const backStrokeColor = `shadow-[${props.skill.color}]`;
   return (
-    <div className="lg:col-span-1 col-span-full border border-white flex flex-col px-4 pt-6 pb-10 text-white mb-4">
+    <div className="lg:col-span-1 col-span-full border border-white flex flex-col px-4 pt-6 pb-10 text-white mb-4 max-w-96">
       <div className="flex items-end mb-4">
         <span className="p-3">{props.skill.icon}</span>
         <div className={`${poppins.className} text-2xl font-bold ml-1`}>

@@ -5,14 +5,7 @@ import React, { useEffect, useState } from "react";
 import { TopNavLink, SideNavLink } from "./NavLink";
 import { IconMenu, IconX } from "@tabler/icons-react";
 import { TypeAnimation } from "react-type-animation";
-
-const navLinks = [
-  { name: "home", href: "#home" },
-  { name: "skills", href: "#skills" },
-  { name: "work", href: "/" },
-  { name: "experience", href: "/" },
-  { name: "contact", href: "/" },
-];
+import { siteFlow } from "@/app/siteFlow";
 
 export const NavBar = () => {
   const [sideNavBarIsOpen, setIsShowSideNavBar] = useState(false);
@@ -38,7 +31,7 @@ export const NavBar = () => {
     };
   }, []);
 
-  const topNavLinksEles = Array.from(navLinks).map((link, index) => {
+  const topNavLinksEles = Array.from(siteFlow).map((link, index) => {
     return (
       <TopNavLink
         key={index}
@@ -49,7 +42,7 @@ export const NavBar = () => {
     );
   });
 
-  const sidewNavLinksEles = Array.from(navLinks).map((link, index) => {
+  const sidewNavLinksEles = Array.from(siteFlow).map((link, index) => {
     return (
       <SideNavLink
         key={index}
@@ -93,11 +86,12 @@ export const NavBar = () => {
             <Link href="./" className="text-2xl text-[#fd8cff] font-mono">
               <span className="text-white">$</span>
               <span className="text-[#C19C00]">/usr</span>
-              <TypeAnimation
+              /lonixchu
+              {/* <TypeAnimation
                 sequence={["/lonixchu", 10 * 1000, "", 300]}
                 speed={35}
                 repeat={Infinity}
-              />
+              /> */}
             </Link>
           </div>
         </div>
