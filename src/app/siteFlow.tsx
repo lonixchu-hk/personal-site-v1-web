@@ -10,7 +10,11 @@ interface flowObject {
 }
 
 const underMaintenance = process.env.underMaintenance == "true";
-console.log(underMaintenance, process.env.underMaintenance);
+console.log(
+  underMaintenance,
+  process.env.underMaintenance,
+  process.env.UNDER_MAINTENANCE
+);
 
 export const siteFlow = [
   {
