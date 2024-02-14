@@ -2,7 +2,8 @@
 const nextConfig = {
   output: "standalone",
   env: {
-    underMaintenance: process.env.UNDER_MAINTENANCE,
+    underMaintenance:
+      process.env.APPSETTING_UNDER_MAINTENANCE || process.env.UNDER_MAINTENANCE,
   },
 };
 
