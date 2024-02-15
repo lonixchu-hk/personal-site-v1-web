@@ -71,7 +71,7 @@ const certifications = [
 
 export const CertificateBlock = () => {
   return (
-    <div className="space-y-4 w-full md:w-[1200px] overflow-x-auto pb-10">
+    <div className="space-y-4 w-full overflow-x-auto pb-10">
       <div className="w-fit flex items-center">
         {certifications.map((cert, index) => (
           <CertCard key={index} cert={cert} />

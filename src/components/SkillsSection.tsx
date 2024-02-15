@@ -65,10 +65,12 @@ export const SkillsSection = () => {
           <SkillCard key={index} skill={skill} />
         ))}
       </div>
-      <SectionTitle classname="text-xl md:text-2xl w-full text-left mt-5">
-        Qualified In:
-      </SectionTitle>
-      <CertificateBlock />
+      <div className="w-full md:mx-5 xl:w-[1180px] mt-5 relative overflow-hidden">
+        <SectionTitle classname="text-xl md:text-2xl text-left">
+          Qualified In:
+        </SectionTitle>
+        <CertificateBlock />
+      </div>
     </section>
   );
 };
