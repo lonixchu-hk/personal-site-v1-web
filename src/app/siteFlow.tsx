@@ -30,7 +30,7 @@ export const siteFlow = [
   {
     name: "work",
     href: "/",
-    component: !underMaintenance ? <div className="h-96" key="3" /> : null,
+    component: !underMaintenance ? <div className="h-96" key="4" /> : null,
   },
   {
     name: "contact",
