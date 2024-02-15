@@ -10,11 +10,6 @@ interface flowObject {
 }
 
 const underMaintenance = process.env.underMaintenance == "true";
-console.log(
-  underMaintenance,
-  process.env.underMaintenance,
-  process.env.UNDER_MAINTENANCE
-);
 
 export const siteFlow = [
   {
@@ -35,7 +30,7 @@ export const siteFlow = [
   {
     name: "work",
     href: "/",
-    component: null,
+    component: !underMaintenance ? <div className="h-96" key="3" /> : null,
   },
   {
     name: "contact",

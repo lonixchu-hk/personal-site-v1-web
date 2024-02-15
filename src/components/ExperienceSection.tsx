@@ -48,7 +48,7 @@ const experiences = [
       "Docker",
       "Javascript",
       "JQuery",
-      "Test Driven Development (TDD)",
+      "TDD",
       "Payment Gateway",
       "Supply Chain",
     ],

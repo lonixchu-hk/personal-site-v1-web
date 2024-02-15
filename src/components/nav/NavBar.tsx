@@ -7,29 +7,20 @@ import { IconMenu, IconX } from "@tabler/icons-react";
 import { TypeAnimation } from "react-type-animation";
 import { siteFlow } from "@/app/siteFlow";
 
-export const NavBar = () => {
-  const [sideNavBarIsOpen, setIsShowSideNavBar] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+interface Props {
+  scrollY: number;
+}
 
+export const NavBar = (props: Props) => {
+  const scrollY = props.scrollY;
+  const [sideNavBarIsOpen, setIsShowSideNavBar] = useState(false);
   const showSideNavBarHandler = (hardcodeCondition: null | boolean = null) => {
     if (hardcodeCondition !== null) {
       setIsShowSideNavBar(hardcodeCondition);
     } else {
       setIsShowSideNavBar(!sideNavBarIsOpen);
     }
-    console.log(sideNavBarIsOpen);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const topNavLinksEles = Array.from(siteFlow).map((link, index) => {
     return (
@@ -66,7 +57,7 @@ export const NavBar = () => {
         scrollY > 100 && scrollY < 300
           ? "invisible opacity-0 top-[-100px]"
           : "visible opacity-100 top-0"
-      } transition-all duration-500 top-0 left-0 z-10 w-full h-20`}
+      } transition-all duration-500 top-0 left-0 z-20 w-full h-20`}
     >
       <div className="py-7 lg:mx-10 mx-5 relative">
         <div className="leftSide absolute grid gap-4 grid-cols-6 w-[200px]">
@@ -86,12 +77,12 @@ export const NavBar = () => {
             <Link href="./" className="text-2xl text-[#fd8cff] font-mono">
               <span className="text-white">$</span>
               <span className="text-[#C19C00]">/usr</span>
-              /lonixchu
-              {/* <TypeAnimation
+              {/* /lonixchu */}
+              <TypeAnimation
                 sequence={["/lonixchu", 10 * 1000, "", 300]}
                 speed={35}
                 repeat={Infinity}
-              /> */}
+              />
             </Link>
           </div>
         </div>
@@ -131,13 +122,6 @@ export const NavBar = () => {
               }}
             />
           </div>
-          {/* <div>
-            <TypeAnimation
-              sequence={["$ ls -1", 10 * 1000, "", 300]}
-              speed={35}
-              repeat={Infinity}
-            />
-          </div> */}
           {sidewNavLinksEles}
         </div>
       </div>
