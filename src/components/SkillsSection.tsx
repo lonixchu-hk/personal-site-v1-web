@@ -1,13 +1,11 @@
 import React from "react";
 import { SectionTitle } from "./SectionTitle";
 import { SkillCard } from "./SkillCard";
+import { CertificateBlock } from "./CertificateBlock";
 import {
-  IconAppWindow,
   IconDeviceDesktop,
   IconBrandVue,
   IconCloudCode,
-  IconBrandAzure,
-  IconBrandAws,
 } from "@tabler/icons-react";
 
 const skillIconSize = "50";
@@ -54,10 +52,6 @@ const skills = [
 ];
 
 export const SkillsSection = () => {
-  const skillCards = Array.from(skills).map((skill, index) => {
-    return <SkillCard key={index} skill={skill} />;
-  });
-
   return (
     <section
       id="skills"
@@ -66,7 +60,15 @@ export const SkillsSection = () => {
       <SectionTitle classname="text-5xl md:text-7xl text-center">
         My Skills
       </SectionTitle>
-      <div className="mt-10 grid grid-cols-3">{skillCards}</div>
+      <div className="mt-10 grid grid-cols-3">
+        {skills.map((skill, index) => (
+          <SkillCard key={index} skill={skill} />
+        ))}
+      </div>
+      <SectionTitle classname="text-xl md:text-2xl w-full text-left mt-5">
+        Qualified In:
+      </SectionTitle>
+      <CertificateBlock />
     </section>
   );
 };

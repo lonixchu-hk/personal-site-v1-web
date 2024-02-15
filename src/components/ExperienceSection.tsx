@@ -83,20 +83,10 @@ const experiences = [
 ];
 
 export const ExperienceSection = () => {
-  const journeyCards = Array.from(experiences).map((experience, index) => {
-    return (
-      <JourneyCard
-        key={index}
-        experience={experience}
-        isLast={index == experiences.length - 1}
-      />
-    );
-  });
-
   return (
     <section
       id="experience"
-      className="scroll-mt-32 lg:mt-10 py-20 px-5 lg:px-14 relative grid grid-cols-12"
+      className="scroll-mt-32 lg:mt-10 max-w-[1600px] py-20 px-5 lg:px-14 relative grid grid-cols-12"
     >
       <div className="text-white col-span-full md:col-span-4 mb-14">
         <SectionTitle classname="text-5xl md:text-7xl text-center lg:text-left">
@@ -109,7 +99,13 @@ export const ExperienceSection = () => {
         </p>
       </div>
       <div className="journeyProcess col-span-full md:col-start-6 md:col-span-7">
-        {journeyCards}
+        {experiences.map((experience, index) => (
+          <JourneyCard
+            key={index}
+            experience={experience}
+            isLast={index == experiences.length - 1}
+          />
+        ))}
       </div>
     </section>
   );

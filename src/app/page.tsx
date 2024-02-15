@@ -22,7 +22,7 @@ export default function Home() {
     return section.component;
   });
   return (
-    <main className="bg-[#1a191d]">
+    <main className="bg-[#1a191d] flex flex-col items-center">
       <NavBar scrollY={scrollY} />
       <BackToTopBtn scrollY={scrollY} />
       {sections}

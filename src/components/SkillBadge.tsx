@@ -5,7 +5,6 @@ const robotoMono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
 
 interface Props {
   children: string;
-  // classname: string;
 }
 
 export const SkillBadge = (props: Props) => {
