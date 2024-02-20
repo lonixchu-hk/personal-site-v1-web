@@ -5,6 +5,7 @@ import { CertCard } from "./CertCard";
 const certifications = [
   {
     type: "Professional Certificate",
+    nature: "Cloud",
     title: "AWS Certified Solutions Architect - Associate",
     issuer: "Amazon Web Services (AWS)",
     issuerImage: "/aws_logo.jpeg",
@@ -16,6 +17,7 @@ const certifications = [
   },
   {
     type: "Professional Certificate",
+    nature: "Cloud",
     title: "AWS Certified Developer - Associate",
     issuer: "Amazon Web Services (AWS)",
     issuerImage: "/aws_logo.jpeg",
@@ -27,7 +29,8 @@ const certifications = [
   },
   {
     type: "Professional Certificate",
-    title: "Microsoft Certified: Azure Developer Associate",
+    nature: "Cloud",
+    title: "Microsoft Certified: Azure Developer Asso.",
     issuer: "Microsoft",
     issuerImage: "/ms_logo.jpeg",
     issueDate: "Nov 2023",
@@ -38,6 +41,7 @@ const certifications = [
   },
   {
     type: "Professional Certificate",
+    nature: "Cloud",
     title: "ACA Cloud Computing Certification",
     issuer: "Alibaba Cloud",
     issuerImage: "/ali_logo.jpeg",
@@ -48,6 +52,7 @@ const certifications = [
   },
   {
     type: "Professional Certificate",
+    nature: "Cloud",
     title: "ACA Developer Certification",
     issuer: "Alibaba Cloud",
     issuerImage: "/ali_logo.jpeg",
@@ -58,6 +63,7 @@ const certifications = [
   },
   {
     type: "Course Certificate",
+    nature: "AI",
     title: "Machine Learning Specialization",
     issuer: "Coursera",
     issuerImage: "/coursera_logo.jpeg",

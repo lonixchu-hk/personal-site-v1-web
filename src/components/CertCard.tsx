@@ -6,6 +6,7 @@ import { IconExternalLink } from "@tabler/icons-react";
 interface Props {
   cert: {
     type: string;
+    nature: string;
     title: string;
     issuer: string;
     issuerImage: string;
@@ -20,7 +21,7 @@ export const CertCard = (props: Props) => {
   return (
     <div className="relative flex items-center h-64 w-[28rem] bg-[#fff] rounded-lg bg-cover backdrop-blur-lg overflow-hidden mx-5 text-sm tracking-tighter transition-all ease-in-out duration-300 hover:scale-[1.02] hover:cursor-pointer">
       <div
-        className={`cert-image-type absolute top-5 right-0 w-[50%] h-6 flex justify-center items-center bg-[${props.cert.color}ff] z-[6]`}
+        className={`cert-image-type absolute top-5 right-0 w-[50%] h-6 flex justify-center items-center bg-opacity-50 bg-[${props.cert.color}] z-[6]`}
       >
         {props.cert.type}
       </div>
@@ -32,6 +33,9 @@ export const CertCard = (props: Props) => {
           alt="Cert image"
         />
       </div>
+      <div className="cert-nature-block w-32 absolute bottom-2 left-2 text-5xl font-extrabold opacity-25">
+        {props.cert.nature}
+      </div>
       <div
         className={`cert-image-overlay top-0 left-0 h-full w-full z-[5] bg-transparent bg-gradient-to-br from-[#ffffffa0] from-30% to-[${props.cert.color}ff] to-100%`}
       />
@@ -39,7 +43,7 @@ export const CertCard = (props: Props) => {
       <div className="z-[6]">
         <div className="w-60 text-[#454545] absolute top-20 right-3">
           <h3 className="text-lg font-semibold">{props.cert.title}</h3>
-          <div className="flex items-center">
+          <div className="flex items-center mt-2">
             <Image
               src={props.cert.issuerImage}
               width={30}

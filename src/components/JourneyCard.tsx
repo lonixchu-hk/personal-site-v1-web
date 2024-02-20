@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IconExternalLink, IconArrowCurveLeft } from "@tabler/icons-react";
 import { SkillBadge } from "@/components/SkillBadge";
 import { Roboto } from "next/font/google";
+import Image from "next/image";
 
 const roboto = Roboto({ weight: "300", subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ interface Props {
 interface Experience {
   title: string[];
   company: string;
+  companyLogo: string;
   companySite: string;
   employmentType: string;
   duration: string;
@@ -54,6 +56,13 @@ export const JourneyCard = (props: Props) => {
               target="_blank"
               className="flex items-center"
             >
+              <Image
+                src={props.experience.companyLogo}
+                width={25}
+                height={25}
+                alt="Company Logo"
+                className="mr-3 rounded-md"
+              />
               <span className="mr-2">{props.experience.company}</span>
               <IconExternalLink stroke={1} size={15} />
             </Link>
