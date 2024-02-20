@@ -14,10 +14,10 @@ const config: Config = {
     "to-[#8462edff]",
     "to-[#ff6a00ff]",
     "to-[#e0eaf6ff]",
-    "bg-[#f79400ff]",
-    "bg-[#8462edff]",
-    "bg-[#ff6a00ff]",
-    "bg-[#e0eaf6ff]",
+    "bg-[#f79400]",
+    "bg-[#8462ed]",
+    "bg-[#ff6a00]",
+    "bg-[#e0eaf6]",
   ],
   theme: {
     extend: {
