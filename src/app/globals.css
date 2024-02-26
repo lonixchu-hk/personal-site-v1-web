@@ -7,7 +7,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 5px;
   height: 2px;
 }
 

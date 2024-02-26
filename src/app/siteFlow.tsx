@@ -2,6 +2,8 @@ import React from "react";
 import { HomeSection } from "@/components/HomeSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
+import { WorkSection } from "@/components/WorkSection";
+import { ContactSection } from "@/components/ContactSection";
 
 interface flowObject {
   name: string;
@@ -27,14 +29,14 @@ export const siteFlow = [
     href: "#experience",
     component: !underMaintenance ? <ExperienceSection key="3" /> : null,
   },
-  {
-    name: "work",
-    href: "/",
-    component: !underMaintenance ? <div className="h-96" key="4" /> : null,
-  },
+  // {
+  //   name: "work",
+  //   href: "#work",
+  //   component: !underMaintenance ? <WorkSection key="4" /> : null,
+  // },
   {
     name: "contact",
-    href: "/",
-    component: !underMaintenance ? <div className="h-96" key="5" /> : null,
+    href: "#contact",
+    component: !underMaintenance ? <ContactSection key="5" /> : null,
   },
 ];
