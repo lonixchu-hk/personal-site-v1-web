@@ -1,10 +1,10 @@
 # My Personal Website
 
-Welcome to the repository for my personal website! This website serves as a digital portfolio and showcases my professional background, skills, and ways to connect with me. It's designed to provide visitors with insights into my experience, expertise, and projects.
+Welcome to the repository for my personal website! This website serves as a digital portfolio and showcases my professional background, skills, and ways to connect with me. It's designed to provide visitors with insights into my experience, expertise, and projects. Here's a brief overview of the different sections:
 
 ### Live Preview
 
-Check out my website: [lonixchu.space](https://www.lonixchu.space){:target="\_blank"}
+Check out my website: [lonixchu.space](https://www.lonixchu.space)
 
 ## Purpose
 
