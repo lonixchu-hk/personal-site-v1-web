@@ -2,7 +2,7 @@ import React from "react";
 import { HomeSection } from "@/components/HomeSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
-import { WorkSection } from "@/components/WorkSection";
+// import { WorkSection } from "@/components/WorkSection";
 import { ContactSection } from "@/components/ContactSection";
 
 interface flowObject {
