@@ -12,7 +12,7 @@ export const SkillBadge = (props: Props) => {
     <div
       className={`rounded-xl bg-[#e0e0e020] w-fit whitespace-nowrap py-1 px-3 text-[0.8rem] text-[#d0d0d0e0] mr-1.5 mt-2 ${robotoMono.className}`}
     >
-      <h1>{props.children}</h1>
+      <h4>{props.children}</h4>
     </div>
   );
 };

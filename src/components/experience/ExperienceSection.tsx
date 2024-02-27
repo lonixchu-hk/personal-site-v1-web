@@ -4,6 +4,7 @@ import { JourneyCard } from "./JourneyCard";
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { experiences } from "./data";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export const ExperienceSection = () => {
   return (
@@ -24,6 +25,9 @@ export const ExperienceSection = () => {
           href="resume.pdf"
           target="_blank"
           className="underline flex items-center mt-10"
+          onClick={() =>
+            sendGAEvent({ event: "buttonClicked", value: "getFullResume" })
+          }
         >
           View Full Résumé
           <IconArrowUpRight className="ml-2" stroke={1} size={15} />

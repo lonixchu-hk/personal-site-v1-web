@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const robotoMono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
@@ -7,7 +8,20 @@ const robotoMono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Lonix Chu - Software Engineer & Full Stack Developer",
   description:
-    "This is Lonix Chu personal website to display his skills and experiences.",
+    "Lonix Chu, a Full Stack Developer based in Hong Kong. Explore my digital realm—a multifaceted online resume and portfolio. Delve into my expertise in full-stack development, cloud computing, and AI. Meet Lonix Chu here!",
+  keywords: [
+    "cloud",
+    "full-stack",
+    "developer",
+    "software",
+    "certification",
+    "AI",
+    "Hong Kong",
+    "resume",
+    "portfolio",
+    "Lonix Chu",
+    "development",
+  ],
 };
 
 export default function RootLayout({
@@ -18,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoMono.className}>{children}</body>
+      <GoogleAnalytics gaId={process.env.gaTrackingId ?? ""} />
     </html>
   );
 }
