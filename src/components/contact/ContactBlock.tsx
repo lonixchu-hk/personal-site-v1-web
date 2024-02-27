@@ -9,7 +9,7 @@ interface Props {
 export const ContactBlock = (props: Props) => {
   return (
     <Link
-      className={`w-full h-full flex flex-col items-center justify-center bg-[${props.contactMethod.color}] bg-opacity-50 transition-all duration-300 hover:scale-[1.03]`}
+      className={`rounded-lg mx-1 w-full h-full flex flex-col items-center justify-center bg-[${props.contactMethod.color}] bg-opacity-50 transition-all duration-300 hover:scale-[1.03]`}
       href={props.contactMethod.url}
       target="_blank"
     >
