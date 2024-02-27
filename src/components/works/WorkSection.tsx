@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "@/components/SectionTitle";
 import { WorkCard } from "./WorkCard";
 
 export const WorkSection = () => {

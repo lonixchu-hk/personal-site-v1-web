@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle } from "../SectionTitle";
+import { SectionTitle } from "@/components/SectionTitle";
 import { SkillCard } from "./SkillCard";
 import { CertificateBlock } from "./CertificateBlock";
 import { skills } from "./data";

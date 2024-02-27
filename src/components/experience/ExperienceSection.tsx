@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle } from "../SectionTitle";
+import { SectionTitle } from "@/components/SectionTitle";
 import { JourneyCard } from "./JourneyCard";
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
