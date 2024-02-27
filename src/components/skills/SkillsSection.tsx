@@ -8,7 +8,7 @@ export const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-10 lg:scroll-mt-10 lg:mt-10 py-20 px-5 lg:px-14 relative w-full flex flex-col items-center"
+      className="scroll-mt-8 lg:mt-10 py-20 px-5 lg:px-14 relative w-full flex flex-col items-center"
     >
       <SectionTitle classname="text-5xl md:text-7xl text-center">
         My Skills
