@@ -2,19 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
+import { ICert } from "./data";
 
 interface Props {
-  cert: {
-    type: string;
-    nature: string;
-    title: string;
-    issuer: string;
-    issuerImage: string;
-    issueDate: string;
-    certImage: string;
-    certLink: string;
-    color: string;
-  };
+  cert: ICert;
 }
 
 export const CertCard = (props: Props) => {

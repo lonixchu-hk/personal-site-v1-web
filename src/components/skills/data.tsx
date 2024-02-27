@@ -1,8 +1,30 @@
-import React from "react";
+import {
+  IconDeviceDesktop,
+  IconBrandVue,
+  IconCloudCode,
+} from "@tabler/icons-react";
 
-import { CertCard } from "./CertCard";
+export interface ICert {
+  type: string;
+  nature: string;
+  title: string;
+  issuer: string;
+  issuerImage: string;
+  issueDate: string;
+  certImage: string;
+  certLink: string;
+  color: string;
+}
 
-const certifications = [
+export interface ISkillObj {
+  title1: string;
+  title2: string;
+  color: string;
+  icon: JSX.Element;
+  content: JSX.Element;
+}
+
+export const certifications = [
   {
     type: "Professional Certificate",
     nature: "Cloud",
@@ -75,14 +97,44 @@ const certifications = [
   },
 ];
 
-export const CertificateBlock = () => {
-  return (
-    <div className="space-y-4 w-full overflow-x-auto pb-10">
-      <div className="w-fit flex items-center">
-        {certifications.map((cert, index) => (
-          <CertCard key={index} cert={cert} />
-        ))}
+const skillIconSize = "50";
+export const skills = [
+  {
+    title1: "Software",
+    title2: "Development",
+    color: "#df058d",
+    icon: <IconDeviceDesktop stroke={1} size={skillIconSize} />,
+    content: (
+      <div>
+        Experienced in both functional and OOP: JavaScript, TypeScript, PHP,
+        .NET.
+        <br />
+        Skilled in developing large-scale web, mobile and desktop applications.
       </div>
-    </div>
-  );
-};
+    ),
+  },
+  {
+    title1: "Frontend Dev",
+    title2: "React, Vue",
+    color: "#2c49d8",
+    icon: <IconBrandVue stroke={1} size={skillIconSize} />,
+    content: (
+      <div>
+        Over 6 years of development experience in HTML, CSS, JS, QJuery, Vue,
+        React and NextJS frameworks.
+      </div>
+    ),
+  },
+  {
+    title1: "Cloud",
+    title2: "Computing",
+    color: "#ff6b2b",
+    icon: <IconCloudCode stroke={1} size={skillIconSize} />,
+    content: (
+      <div>
+        Equiped with multiple cloud certifications: AWS-SAA, AWS-CDA, Azure
+        Developer Associate, ACA Cloud Computing, ACA Developer.
+      </div>
+    ),
+  },
+];

@@ -2,7 +2,7 @@
 
 import React, { use } from "react";
 import { Poppins } from "next/font/google";
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "../SectionTitle";
 
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 

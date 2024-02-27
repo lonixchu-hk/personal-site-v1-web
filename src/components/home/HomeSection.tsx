@@ -1,7 +1,7 @@
 import React from "react";
-import { HeroSection } from "@/components/HeroSection";
-import { BackgroundOverlay } from "@/components/BackgroundOverlay";
-import { ScrollDownIcon } from "@/components/ScrollDownIcon";
+import { HeroSection } from "@/components/home/HeroSection";
+import { BackgroundOverlay } from "@/components/home/BackgroundOverlay";
+import { ScrollDownIcon } from "@/components/home/ScrollDownIcon";
 
 interface Props {
   underMaintenance: boolean;

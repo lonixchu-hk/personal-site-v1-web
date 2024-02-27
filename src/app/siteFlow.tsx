@@ -1,9 +1,9 @@
 import React from "react";
-import { HomeSection } from "@/components/HomeSection";
-import { SkillsSection } from "@/components/SkillsSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
+import { HomeSection } from "@/components/home/HomeSection";
+import { SkillsSection } from "@/components/skills/SkillsSection";
+import { ExperienceSection } from "@/components/experience/ExperienceSection";
 // import { WorkSection } from "@/components/WorkSection";
-import { ContactSection } from "@/components/ContactSection";
+import { ContactSection } from "@/components/contact/ContactSection";
 
 interface flowObject {
   name: string;

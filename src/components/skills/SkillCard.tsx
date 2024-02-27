@@ -1,18 +1,11 @@
 import React from "react";
 import { Poppins } from "next/font/google";
+import { ISkillObj } from "./data";
 
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 
-interface SkillObj {
-  title1: string;
-  title2: string;
-  color: string;
-  icon: JSX.Element;
-  content: JSX.Element;
-}
-
 interface Props {
-  skill: SkillObj;
+  skill: ISkillObj;
 }
 
 export const SkillCard = (props: Props) => {

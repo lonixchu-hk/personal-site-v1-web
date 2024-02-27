@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Lottie from "lottie-react";
-import scrollDown from "../../public/scrollDown.json";
+import scrollDown from "../../../public/scrollDown.json";
 
 export const ScrollDownIcon = () => {
   return (
