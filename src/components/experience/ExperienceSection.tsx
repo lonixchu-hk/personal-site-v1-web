@@ -9,7 +9,7 @@ export const ExperienceSection = () => {
   return (
     <section
       id="experience"
-      className="scroll-mt-32 lg:mt-10 max-w-[1400px] py-20 px-5 lg:px-14 relative grid grid-cols-12"
+      className=" lg:mt-10 max-w-[1400px] py-20 px-5 lg:px-14 relative grid grid-cols-12"
     >
       <div className="text-white col-span-full md:col-span-4 mb-14">
         <SectionTitle classname="text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-center md:text-left">
