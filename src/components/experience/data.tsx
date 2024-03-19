@@ -18,11 +18,10 @@ export const experiences = [
     employmentType: "Full-time",
     duration: "Jun 2023 — PRESENT",
     description: [
-      "Headed Booking System Revamp. Integration on various existing booking CMS to a multi-functional internal system using C# and Vue.js.",
-      "Responsible for company Image Management System (IMS) revamping project, with testcases implementation and documentation",
-      "Design and develop several Wechat Mini Programs (微信小程序) for business to serve Mainland customers, with WeCom integration.",
-      "Responsible for Internal Systems, E-commerce Site, CRM Sites, POS System and Supply Chain System development",
-      "Responsible for company's internal and external system maintenance and support",
+      "Head Booking System Revamp. Integration on various existing booking CMS to a multi-functional internal system using C# and Vue.js.",
+      "Responsible for company Image Management System (IMS) revamping project, with test cases implementation and documentation",
+      "Design and develop several WeChat Mini Programs (微信小程序) for business to serve Mainland customers, with WeCom integration.",
+      "Propose and develop an integrated RFID solution with Flutter for capturing product data in customer in-store shopping journey to enhance CRM business",
     ],
     skills: [
       "C#",
