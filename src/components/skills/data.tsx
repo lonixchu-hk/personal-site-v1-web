@@ -27,6 +27,18 @@ export interface ISkillObj {
 export const certifications = [
   {
     type: "Professional Certificate",
+    nature: "Kubernetes",
+    title: "CKAD: Certified Kubernetes Application Developer",
+    issuer: "The Linux Foundation",
+    issuerImage: "/lf_logo.jpg",
+    issueDate: "Apr 2024",
+    certImage: "/CKAD_BADGE.png",
+    certLink:
+      "https://www.credly.com/badges/58d7f587-622c-4f6c-8658-43b9c00fb6c8/linked_in_profile",
+    color: "#427af4",
+  },
+  {
+    type: "Professional Certificate",
     nature: "Cloud",
     title: "AWS Certified Solutions Architect - Associate",
     issuer: "Amazon Web Services (AWS)",
@@ -93,7 +105,7 @@ export const certifications = [
     certImage: "/COURSERA_BADGE.png",
     certLink:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/TJXC2VWPSUF9",
-    color: "#e0eaf6",
+    color: "#8462ed",
   },
 ];
 

@@ -31,8 +31,8 @@ export const CertCard = (props: Props) => {
         className={`cert-image-overlay top-0 left-0 h-full w-full z-[5] bg-transparent bg-gradient-to-br from-[#ffffffa0] from-30% to-[${props.cert.color}ff] to-100%`}
       />
 
-      <div className="z-[6]">
-        <div className="w-60 text-[#454545] absolute top-20 right-3">
+      <div className="z-[6] text-[#454545]">
+        <div className="w-60 absolute top-[4.5rem] right-3">
           <h3 className="text-lg font-semibold">{props.cert.title}</h3>
           <div className="flex items-center mt-2">
             <Image
