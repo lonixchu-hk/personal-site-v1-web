@@ -28,6 +28,18 @@ export const certifications = [
   {
     type: "Professional Certificate",
     nature: "Kubernetes",
+    title: "CKA: Certified Kubernetes Administrator",
+    issuer: "The Linux Foundation",
+    issuerImage: "/lf_logo.jpg",
+    issueDate: "May 2024",
+    certImage: "/CKA_BADGE.png",
+    certLink:
+      "https://www.credly.com/badges/d36d2fa1-bd51-4c81-bcd4-721129b834b9/linked_in_profile",
+    color: "#427af4",
+  },
+  {
+    type: "Professional Certificate",
+    nature: "Kubernetes",
     title: "CKAD: Certified Kubernetes Application Developer",
     issuer: "The Linux Foundation",
     issuerImage: "/lf_logo.jpg",
