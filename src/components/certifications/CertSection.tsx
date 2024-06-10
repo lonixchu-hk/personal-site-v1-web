@@ -30,11 +30,14 @@ export const CertSection = (props: Props) => {
         </SectionTitle>
         {Object.keys(certGroups).map(function (certNature, natureIndex) {
           return (
-            <div className="space-y-4 w-full overflow-x-auto pb-5 mb-5">
+            <div
+              className="space-y-4 w-full overflow-x-auto pb-5 mb-5"
+              key={natureIndex}
+            >
               <div className="text-xl">
                 $ <span className="text-[#C19C00]">cd</span> ./{certNature}
               </div>
-              <ScrollableDiv key={natureIndex}>
+              <ScrollableDiv>
                 {certGroups[certNature].map((cert, index) => (
                   <CertCard key={index} cert={cert} />
                 ))}
