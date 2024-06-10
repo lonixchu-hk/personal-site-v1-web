@@ -1,27 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { IContactMethod } from "@/app/profileEntity";
+import { getIcon, IContactMethod } from "@/app/profileEntity";
 import { sendGAEvent } from "@next/third-parties/google";
-import {
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandGmail,
-  IconFileTypePdf,
-} from "@tabler/icons-react";
 
 interface Props {
   contactMethod: IContactMethod;
 }
 
 const iconSize = 60;
-const iconMap = {
-  IconBrandLinkedin: (
-    <IconBrandLinkedin color="white" stroke={1} size={iconSize} />
-  ),
-  IconBrandGithub: <IconBrandGithub color="white" stroke={1} size={iconSize} />,
-  IconBrandGmail: <IconBrandGmail color="white" stroke={1} size={iconSize} />,
-  IconFileTypePdf: <IconFileTypePdf color="white" stroke={1} size={iconSize} />,
-};
 
 export const ContactBlock = (props: Props) => {
   return (
@@ -36,7 +22,7 @@ export const ContactBlock = (props: Props) => {
         })
       }
     >
-      {iconMap[props.contactMethod.icon]}{" "}
+      {getIcon(props.contactMethod.icon, iconSize)}{" "}
       <div className="mt-1 text-white">{props.contactMethod.name}</div>
     </Link>
   );
