@@ -37,6 +37,7 @@ jobs:
         env:
           UNDER_MAINTENANCE: ${{ vars.UNDER_MAINTENANCE }}
           GA_TRACKING_ID: ${{ vars.GA_TRACKING_ID }}
+          GET_PROFILE_URL: ${{ vars.GET_PROFILE_URL }}
           
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
