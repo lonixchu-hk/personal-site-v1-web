@@ -10,7 +10,7 @@ interface Props {
 
 export const CertCard = (props: Props) => {
   return (
-    <div className="scale-90 sm:scale-100 relative inline-flex items-center h-64 w-[28rem]  bg-[#fff] rounded-lg bg-cover backdrop-blur-lg overflow-hidden mx-5 text-sm tracking-tighter transition-all ease-in-out duration-300 sm:hover:scale-[1.02]">
+    <div className="scale-75 mx-[-40px] mt-[-30px] sm:scale-100 sm:mx-5 sm:mt-0 relative inline-flex items-center h-64 w-[28rem]  bg-[#fff] rounded-lg bg-cover backdrop-blur-lg overflow-hidden text-sm tracking-tighter transition-all ease-in-out duration-300 sm:hover:scale-[1.02]">
       <div
         className={`cert-image-type absolute top-5 right-0 w-[50%] h-6 flex justify-center items-center bg-opacity-50 bg-[${props.cert.color}] z-[6]`}
       >
