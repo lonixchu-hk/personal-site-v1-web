@@ -4,6 +4,7 @@ import { IconExternalLink, IconArrowCurveLeft } from "@tabler/icons-react";
 import { SkillBadge } from "@/components/skills/SkillBadge";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
+import { IExperience } from "@/app/profileEntity";
 
 const roboto = Roboto({ weight: "300", subsets: ["latin"] });
 
