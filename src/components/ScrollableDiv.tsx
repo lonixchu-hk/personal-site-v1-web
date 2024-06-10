@@ -1,4 +1,10 @@
-import React, { useRef, useState, useEffect, MouseEvent } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  MouseEvent,
+  TouchEvent,
+} from "react";
 
 interface ScrollableDivProps {
   children: React.ReactNode;
@@ -43,6 +49,31 @@ const ScrollableDiv: React.FC<ScrollableDivProps> = ({ children }) => {
     checkArrows();
   };
 
+  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    setStartX(
+      e.touches[0].pageX - (scrollContainerRef.current?.offsetLeft || 0)
+    );
+    setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
+  };
+
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x =
+      e.touches[0].pageX - (scrollContainerRef.current?.offsetLeft || 0);
+    const walk = (x - startX) * 2; // Adjust scroll speed by multiplying by 2
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    }
+    checkArrows();
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    checkArrows();
+  };
+
   const checkArrows = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } =
@@ -62,6 +93,9 @@ const ScrollableDiv: React.FC<ScrollableDivProps> = ({ children }) => {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         onScroll={checkArrows}
       >
         {children}

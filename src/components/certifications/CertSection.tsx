@@ -21,7 +21,7 @@ export const CertSection = (props: Props) => {
     certs.length > 0 && (
       <section
         id="certifications"
-        className="scroll-mt-8 w-full md:mx-5 xl:w-[1180px] mt-5 relative overflow-hidden"
+        className="scroll-mt-8 w-full md:mx-5 xl:w-[1180px] mt-5 px-5 lg:px-5 relative overflow-hidden"
       >
         <SectionTitle className="text-xl md:text-2xl text-left">
           Qualified In:
