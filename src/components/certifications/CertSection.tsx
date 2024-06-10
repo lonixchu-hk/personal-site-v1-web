@@ -28,13 +28,13 @@ export const CertSection = (props: Props) => {
         <SectionTitle className="text-xl md:text-2xl text-left">
           Qualified In:
         </SectionTitle>
-        {Object.keys(certGroups).map(function (certNature) {
+        {Object.keys(certGroups).map(function (certNature, natureIndex) {
           return (
             <div className="space-y-4 w-full overflow-x-auto pb-5 mb-5">
               <div className="text-xl">
                 $ <span className="text-[#C19C00]">cd</span> ./{certNature}
               </div>
-              <ScrollableDiv>
+              <ScrollableDiv key={natureIndex}>
                 {certGroups[certNature].map((cert, index) => (
                   <CertCard key={index} cert={cert} />
                 ))}
