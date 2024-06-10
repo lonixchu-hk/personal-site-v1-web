@@ -10,7 +10,20 @@ const nextConfig = {
       process.env.APPSETTING_GET_PROFILE_URL || process.env.GET_PROFILE_URL,
   },
   images: {
-    domains: ["localhost", "lonixsiteresources.blob.core.windows.net"],
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "lonixsiteresources.blob.core.windows.net", // Allow any subdomain of example.com
+        port: "",
+        pathname: "/images/**", // Allow any path under /images/
+      },
+    ],
   },
 };
 
