@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
-import { ICert } from "./data";
+import { ICert } from "@/app/profileEntity";
 
 interface Props {
   cert: ICert;
@@ -10,7 +10,7 @@ interface Props {
 
 export const CertCard = (props: Props) => {
   return (
-    <div className="relative flex items-center h-64 w-[28rem] bg-[#fff] rounded-lg bg-cover backdrop-blur-lg overflow-hidden mx-5 text-sm tracking-tighter transition-all ease-in-out duration-300 hover:scale-[1.02] hover:cursor-pointer">
+    <div className="relative inline-flex items-center h-64 w-[28rem] bg-[#fff] rounded-lg bg-cover backdrop-blur-lg overflow-hidden mx-5 text-sm tracking-tighter transition-all ease-in-out duration-300 hover:scale-[1.02]">
       <div
         className={`cert-image-type absolute top-5 right-0 w-[50%] h-6 flex justify-center items-center bg-opacity-50 bg-[${props.cert.color}] z-[6]`}
       >
@@ -32,7 +32,7 @@ export const CertCard = (props: Props) => {
       />
 
       <div className="z-[6] text-[#454545]">
-        <div className="w-60 absolute top-[4.5rem] right-3">
+        <div className="w-60 absolute top-[4.5rem] right-3 whitespace-normal">
           <h3 className="text-lg font-semibold">{props.cert.title}</h3>
           <div className="flex items-center mt-2">
             <Image

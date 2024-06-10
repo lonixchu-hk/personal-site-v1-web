@@ -25,3 +25,47 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.scrollable-container {
+  position: relative;
+}
+
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  pointer-events: none;
+  width: 40px;
+  height: 50%;
+}
+
+.left-arrow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0px;
+  background: linear-gradient(to left, transparent, white);
+}
+
+.right-arrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  right: 0px;
+  background: linear-gradient(to right, transparent 30%, white);
+}

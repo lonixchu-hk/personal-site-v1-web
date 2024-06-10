@@ -1,19 +1,31 @@
 import React from "react";
 import { Poppins } from "next/font/google";
-import { ISkillObj } from "./data";
+import { ISkill } from "@/app/profileEntity";
+import {
+  IconDeviceDesktop,
+  IconBrandVue,
+  IconCloudCode,
+} from "@tabler/icons-react";
 
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 
 interface Props {
-  skill: ISkillObj;
+  skill: ISkill;
 }
+
+const skillIconSize = "50";
+const iconMap = {
+  IconDeviceDesktop: <IconDeviceDesktop stroke={1} size={skillIconSize} />,
+  IconBrandVue: <IconBrandVue stroke={1} size={skillIconSize} />,
+  IconCloudCode: <IconCloudCode stroke={1} size={skillIconSize} />,
+};
 
 export const SkillCard = (props: Props) => {
   const backStrokeColor = `shadow-[${props.skill.color}]`;
   return (
     <div className="lg:col-span-1 col-span-full border border-white flex flex-col px-4 pt-6 pb-10 text-white mb-4 max-w-96">
       <div className="flex items-end mb-4">
-        <span className="p-3">{props.skill.icon}</span>
+        <span className="p-3">{iconMap[props.skill.icon]}</span>
         <div className={`${poppins.className} text-2xl font-bold ml-1`}>
           <div
             className={`w-fit px-[1px] pr-1 leading-6 shadow-inner2 ${backStrokeColor}`}
