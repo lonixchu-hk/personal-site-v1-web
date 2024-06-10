@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
-  const [profile, setProfile] = useState({});
+  const [profile, setProfile] = useState(null);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -37,17 +37,19 @@ export default function Home() {
   const sections = siteFlow.map((section, index) => {
     // get section data
     let component = section.component;
-    if (component?.props.data !== undefined) {
-      component = React.cloneElement(component, {
-        ...component.props,
-        data: profile[section.name] ?? [],
-      });
-    }
-    if (component?.props.basicProfile !== undefined) {
-      component = React.cloneElement(component, {
-        ...component.props,
-        basicProfile: profile["basic"] ?? {},
-      });
+    if (profile !== null) {
+      if (component?.props.data !== undefined) {
+        component = React.cloneElement(component, {
+          ...component.props,
+          data: profile[section.name] ?? [],
+        });
+      }
+      if (component?.props.basicProfile !== undefined) {
+        component = React.cloneElement(component, {
+          ...component.props,
+          basicProfile: profile["basic"] ?? {},
+        });
+      }
     }
     return component;
   });

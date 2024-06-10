@@ -1,7 +1,5 @@
 import React from "react";
 import { SectionTitle } from "@/components/SectionTitle";
-import { SkillCard } from "./SkillCard";
-import { CertificateBlock } from "./CertificateBlock";
 import { CertCard } from "./CertCard";
 import { ICert } from "@/app/profileEntity";
 import ScrollableDiv from "../ScrollableDiv";

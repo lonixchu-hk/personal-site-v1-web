@@ -10,9 +10,9 @@ export interface IProfile {
 }
 
 export interface IBasicProfile {
-  name: string;
-  tagline: string;
-  summary: string;
+  name?: string;
+  tagline?: string;
+  summary?: string;
 }
 
 export interface ICert {
