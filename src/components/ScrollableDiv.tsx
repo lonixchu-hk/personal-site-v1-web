@@ -1,8 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
-// import "./ScrollableDiv.css";
+import React, { useRef, useState, useEffect, MouseEvent } from "react";
 
-const ScrollableDiv = ({ children }) => {
-  const scrollContainerRef = useRef(null);
+interface ScrollableDivProps {
+  children: React.ReactNode;
+}
+
+const ScrollableDiv: React.FC<ScrollableDivProps> = ({ children }) => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -13,18 +16,20 @@ const ScrollableDiv = ({ children }) => {
     checkArrows();
   }, []);
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
+    setStartX(e.pageX - (scrollContainerRef.current?.offsetLeft || 0));
+    setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const x = e.pageX - (scrollContainerRef.current?.offsetLeft || 0);
     const walk = (x - startX) * 2; // Adjust scroll speed by multiplying by 2
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    }
     checkArrows();
   };
 
@@ -39,9 +44,12 @@ const ScrollableDiv = ({ children }) => {
   };
 
   const checkArrows = () => {
-    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-    setShowLeftArrow(scrollLeft > 0);
-    setShowRightArrow(scrollLeft + clientWidth < scrollWidth);
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      setShowLeftArrow(scrollLeft > 0);
+      setShowRightArrow(scrollLeft + clientWidth < scrollWidth);
+    }
   };
 
   return (
