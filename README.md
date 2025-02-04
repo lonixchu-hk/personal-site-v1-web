@@ -4,7 +4,7 @@ Welcome to the repository for my personal website! This website serves as a digi
 
 ### Live Preview
 
-Check out my website: [lonixchu.space](https://www.lonixchu.space)
+Check out my website: [lonixchu.com](https://www.lonixchu.com)
 
 ## Purpose
 
