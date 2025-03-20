@@ -24,7 +24,7 @@ export const ExperienceSection = (props: Props) => {
             My Journey
           </SectionTitle>
           <p className="mt-5">{props.basicProfile.summary ?? ""}|</p>
-          <Link
+          {/* <Link
             href="resume.pdf"
             target="_blank"
             className="underline flex items-center mt-10"
@@ -34,7 +34,7 @@ export const ExperienceSection = (props: Props) => {
           >
             View Full Résumé
             <IconArrowUpRight className="ml-2" stroke={1} size={15} />
-          </Link>
+          </Link> */}
         </div>
         <div className="journeyProcess col-span-full md:col-start-6 md:col-span-7">
           {experiences.map((experience, index) => (
