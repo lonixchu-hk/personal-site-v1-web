@@ -38,7 +38,7 @@ export const CertCard = (props: Props) => {
           <h3 className="text-lg font-semibold">{props.cert.title}</h3>
           <div className="flex items-center mt-2">
             <Image
-              src={props.cert.issuerImage}
+              src={`${imgDomain}${props.cert.issuerImage}`}
               width={30}
               height={30}
               alt="Issuer Logo"
