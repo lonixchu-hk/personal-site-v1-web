@@ -8,7 +8,7 @@ interface Props {
   cert: ICert;
 }
 
-const imgDomain = process.env.IMG_DOMAIN;
+const imgDomain = process.env.imgDomain;
 
 export const CertCard = (props: Props) => {
   return (

@@ -13,7 +13,7 @@ interface Props {
   isLast: boolean;
 }
 
-const imgDomain = process.env.IMG_DOMAIN;
+const imgDomain = process.env.imgDomain;
 
 export const JourneyCard = (props: Props) => {
   return (
