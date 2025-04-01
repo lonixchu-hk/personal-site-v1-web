@@ -8,6 +8,8 @@ interface Props {
   cert: ICert;
 }
 
+const imgDomain = process.env.IMG_DOMAIN;
+
 export const CertCard = (props: Props) => {
   return (
     <div className="scale-75 mx-[-40px] mt-[-30px] sm:scale-100 sm:mx-5 sm:mt-0 relative inline-flex items-center h-64 w-[28rem]  bg-[#fff] rounded-lg bg-cover backdrop-blur-lg overflow-hidden text-sm tracking-tighter transition-all ease-in-out duration-300 sm:hover:scale-[1.02]">
@@ -18,7 +20,7 @@ export const CertCard = (props: Props) => {
       </div>
       <div className="cert-image-block w-fit absolute top-[-50px] left-[-50px]">
         <Image
-          src={props.cert.certImage}
+          src={`${imgDomain}${props.cert.certImage}`}
           width={250}
           height={250}
           alt="Cert image"
