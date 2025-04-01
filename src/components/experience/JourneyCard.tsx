@@ -13,6 +13,8 @@ interface Props {
   isLast: boolean;
 }
 
+const imgDomain = process.env.IMG_DOMAIN;
+
 export const JourneyCard = (props: Props) => {
   return (
     <div className="journey-timeline-block text-white lg:p-10 flex rounded-md transition-all ease-in-out lg:hover:scale-[1.02] duration-300 lg:hover:cursor-pointer lg:hover:bg-[#56535f50]">
@@ -47,7 +49,7 @@ export const JourneyCard = (props: Props) => {
               className="flex items-center"
             >
               <Image
-                src={props.experience.companyLogo}
+                src={`${imgDomain}${props.experience.companyLogo}`}
                 width={25}
                 height={25}
                 alt="Company Logo"

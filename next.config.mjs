@@ -4,6 +4,7 @@ const nextConfig = {
   env: {
     underMaintenance:
       process.env.APPSETTING_UNDER_MAINTENANCE || process.env.UNDER_MAINTENANCE,
+    imgDomain: process.env.APPSETTING_IMG_DOMAIN || process.env.IMG_DOMAIN,
     gaTrackingId:
       process.env.APPSETTING_GA_TRACKING_ID || process.env.GA_TRACKING_ID,
     getProfileApi:
